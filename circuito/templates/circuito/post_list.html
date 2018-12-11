@@ -1,9 +1,11 @@
-<html>
-    <head>
-        <title>Ola's blog</title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </body>
-</html>
+<div>
+    <h1><a href="/">Circuito Leitura</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>publicado em: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
